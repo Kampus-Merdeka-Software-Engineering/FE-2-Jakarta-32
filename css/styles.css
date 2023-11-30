@@ -1,0 +1,271 @@
+@import url(_typeface.css);
+@import url(_navbar.css);
+@import url(_footer.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+}
+
+/* Main */
+section#main {
+	margin-top: 62px;
+	padding: 0 80px;
+}
+
+section#main .parent {
+	height: calc(100vh - 80px);
+	padding: 20px 0;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.div1 {
+	grid-area: 1 / 1 / 6 / 7;
+}
+.div2 {
+	grid-area: 1 / 7 / 4 / 13;
+}
+.div3 {
+	grid-area: 4 / 7 / 6 / 10;
+}
+.div4 {
+	grid-area: 4 / 10 / 6 / 13;
+}
+
+#cardItem {
+	border-radius: 16px;
+}
+
+#cardItem .card {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: 16px;
+}
+
+.card img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	border-radius: 16px;
+}
+
+.card .txt {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: white;
+}
+
+.gradient-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	border-radius: 16px;
+}
+
+/* categoryItem */
+.wrapper {
+	padding: 0px 80px;
+	display: flex;
+	gap: 16px;
+	margin-bottom: 40px;
+}
+
+.boxCategory {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 70%;
+}
+
+.categoryItem h1,
+.popular h1 {
+	padding: 20px 0 0 0;
+}
+
+.categoryItem .box {
+	margin-top: 14px;
+	display: flex;
+	gap: 20px;
+}
+
+/* popular */
+.wrapper .popular {
+	top: 62px;
+	height: 100vh;
+	background-color: #fff;
+	position: sticky;
+	overflow: auto;
+	width: 30%;
+}
+
+.popular .box {
+	margin-top: 14px;
+}
+
+.popular .box .cardItem {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	border-radius: 8px;
+	margin-bottom: 16px;
+}
+
+.popular .box .cardItem img {
+	width: 150px;
+	height: 150px;
+	border-radius: 8px;
+}
+
+/* Subscribe */
+section#subscribe {
+	margin: 20px 80px;
+	margin-bottom: 40px;
+	color: #fff;
+}
+
+section#subscribe .container {
+	background: linear-gradient(45deg, #004915, #01300e);
+	border-radius: 16px;
+	padding: 40px 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+section#subscribe .container form button {
+	padding: 8px 24px;
+	border-radius: 4px;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 954px) {
+	header {
+		padding: 16px 40px;
+	}
+
+	/* main */
+	section#main {
+		padding: 16px 40px;
+	}
+
+	.wrapper {
+		padding: 0px 40px;
+	}
+
+	section#subscribe {
+		margin: 20px 40px;
+	}
+}
+
+@media only screen and (max-width: 730px) {
+	* h1 {
+		font-size: 24px;
+	}
+	header {
+		box-shadow: none;
+	}
+
+	section#main .parent {
+		height: calc(100vh - 80px);
+		padding: 20px 0;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+	}
+
+	.div1 {
+		grid-area: 1 / 1 / 4 / 7;
+	}
+	.div2 {
+		grid-area: 1 / 7 / 4 / 13;
+	}
+	.div3 {
+		grid-area: 4 / 1 / 7 / 7;
+	}
+	.div4 {
+		grid-area: 4 / 7 / 7 / 13;
+	}
+
+	.categoryItem .box {
+		flex-direction: column;
+	}
+
+	.popular .box .cardItem {
+		flex-direction: column;
+		justify-content: start;
+		align-items: flex-start;
+	}
+
+	.popular .box .cardItem .txt p {
+		font-size: 12px;
+	}
+	.popular .box .cardItem .txt h2 {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	section#main .parent {
+		position: static;
+		display: flex;
+		flex-direction: column;
+	}
+
+	section#main {
+		position: static;
+		height: auto;
+	}
+
+	.wrapper {
+		margin-top: 250px;
+		position: static;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.wrapper .popular {
+		display: block;
+		position: static;
+		height: auto;
+		width: 100%;
+	}
+
+	.popular .box .cardItem img {
+		width: 100%;
+	}
+
+	.boxCategory {
+		position: static;
+		width: 100%;
+		display: block;
+	}
+
+	section#subscribe {
+		position: static;
+		top: 260px;
+	}
+
+	section#subscribe .container {
+		padding: 20px;
+	}
+}

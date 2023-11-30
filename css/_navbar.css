@@ -1,0 +1,160 @@
+header {
+	z-index: 1;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 16px 80px;
+	box-shadow: 10px 0px 50px rgba(0, 255, 0, 0.1);
+}
+
+/* 00ff00 */
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav .box {
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+nav h1 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #40da6b;
+}
+
+nav h1 span {
+	color: #000;
+	font-style: italic;
+	font-weight: 400;
+}
+
+nav ul {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	gap: 20px;
+}
+
+nav ul li {
+	list-style: none;
+}
+nav ul li a {
+	text-decoration: none;
+	color: #000;
+	transition: all 400ms;
+}
+
+nav ul li a:hover {
+	color: #40da6b;
+	transition: all 400ms;
+}
+
+nav ul li a.active {
+	color: #40da6b;
+	font-weight: bold;
+}
+
+.BoxSearchAccount {
+	display: flex;
+	gap: 20px;
+}
+
+.BoxSearchAccount .search,
+.BoxSearchAccount .account {
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	cursor: pointer;
+	font-size: 1rem;
+	color: #000;
+	transition: all 400ms;
+}
+
+.BoxSearchAccount .search:hover {
+	background-color: #e4e3e3;
+	color: #000;
+	transition: all 400ms;
+}
+
+.BoxSearchAccount .account {
+	background-color: #40da6b;
+	color: #fff;
+	transition: all 400ms;
+}
+
+.BoxSearchAccount .account:hover {
+	background-color: #17c217;
+	color: #ececec;
+	transition: all 400ms;
+}
+
+.toggleNav {
+	display: none;
+}
+
+/* responsive */
+@media only screen and (max-width: 954px) {
+	.BoxSearchAccount button span {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 730px) {
+	nav .box {
+		display: none;
+	}
+
+	nav .box.active {
+		left: 0;
+		z-index: 0;
+		width: 100vw;
+		align-self: flex-start;
+		position: absolute;
+		top: 45px;
+		display: flex;
+		flex-direction: column;
+		padding: 20px 40px;
+		gap: 20px;
+		border-radius: 0 0 10px 10px;
+		box-shadow: -10px 30px 50px rgba(0, 255, 0, 0.1);
+	}
+
+	nav .box ul {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+	nav .box ul li {
+		padding: 10px 0;
+	}
+
+	.BoxSearchAccount .search,
+	.BoxSearchAccount .account {
+		justify-content: center;
+		width: 100%;
+	}
+
+	.BoxSearchAccount .search span,
+	.BoxSearchAccount .account span {
+		display: block;
+	}
+
+	.toggleNav {
+		display: block;
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+}
