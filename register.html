@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/_register.css" />
+		<title>Register</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left">
+				<h1>HEALTHY <span class="text">NEWS.</span></h1>
+			</div>
+			<div class="right">
+				<form id="loginForm" action="login.php" method="post">
+					<h2>Register</h2>
+					<label for="Email">Email:</label>
+					<input
+						type="text"
+						id="username"
+						name="username"
+						placeholder="Type your Email"
+						required />
+
+					<label for="username">Username:</label>
+					<input
+						type="text"
+						id="username"
+						name="username"
+						placeholder="Type your username"
+						required />
+
+					<label for="password">Password:</label>
+					<div class="password-container">
+						<input
+							type="password"
+							id="password"
+							name="password"
+							placeholder="Type your password"
+							required />
+						<span
+							class="toggle-password"
+							onclick="togglePasswordVisibility()"></span>
+					</div>
+
+					<div class="button-register">
+						<button type="button" onclick="validateForm()">Register</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="js/login.js"></script>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+@import url(_typeface.css);
+@import url(_navbar.css);
+@import url(_footer.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	margin-top: 120px;
+	padding: 0 80px;
+}
+
+main .txtTitle {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+main .txtTitle p {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+main .container {
+	padding: 50px 0;
+	justify-content: space-between;
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.container .boxCard {
+	width: 45%;
+	gap: 8px;
+	display: flex;
+	align-items: center;
+}
+
+.container .boxCard .txtCard p {
+	font-size: 14px;
+	margin-top: 10px;
+	color: #40da6b;
+}
+
+.container .boxCard img {
+	border-radius: 8px;
+	width: 150px;
+	height: 160px;
+	object-fit: cover;
+}
+
+main span {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+main a {
+	text-decoration: none;
+	color: #000;
+}
+
+@media only screen and (max-width: 954px) {
+	main {
+		padding: 0 40px;
+	}
+
+	main .container .boxCard {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 730px) {
+	main .container {
+		justify-content: space-between;
+		display: flex;
+		/* gap: 10px; */
+	}
+
+	main .container .boxCard {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	main .container .boxCard {
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	main .container .boxCard img {
+		width: 100%;
+		height: 150px;
+	}
+}

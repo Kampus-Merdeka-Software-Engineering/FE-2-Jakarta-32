@@ -158,10 +158,6 @@ section#subscribe .container form button {
 /* Responsive */
 
 @media only screen and (max-width: 954px) {
-	header {
-		padding: 16px 40px;
-	}
-
 	/* main */
 	section#main {
 		padding: 16px 40px;
@@ -179,9 +175,6 @@ section#subscribe .container form button {
 @media only screen and (max-width: 730px) {
 	* h1 {
 		font-size: 24px;
-	}
-	header {
-		box-shadow: none;
 	}
 
 	section#main .parent {
@@ -227,6 +220,7 @@ section#subscribe .container form button {
 
 @media only screen and (max-width: 425px) {
 	section#main .parent {
+		height: auto;
 		position: static;
 		display: flex;
 		flex-direction: column;
@@ -238,7 +232,6 @@ section#subscribe .container form button {
 	}
 
 	.wrapper {
-		margin-top: 120px;
 		position: static;
 		display: flex;
 		flex-direction: column-reverse;

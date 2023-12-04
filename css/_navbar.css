@@ -81,6 +81,7 @@ nav ul li a.active {
 	font-size: 1rem;
 	color: #000;
 	transition: all 400ms;
+	text-decoration: none;
 }
 
 .BoxSearchAccount .search:hover {
@@ -110,11 +111,19 @@ nav ul li a.active {
 	.BoxSearchAccount button span {
 		display: none;
 	}
+
+	header {
+		padding: 16px 40px;
+	}
 }
 
 @media only screen and (max-width: 730px) {
 	nav .box {
 		display: none;
+	}
+
+	header {
+		box-shadow: none;
 	}
 
 	nav .box.active {
