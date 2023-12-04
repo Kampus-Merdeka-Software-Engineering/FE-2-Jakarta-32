@@ -1,6 +1,6 @@
-@import url(_typeface.css);
-@import url(_navbar.css);
-@import url(_footer.css);
+@import url(typeface.css);
+@import url(navbar.css);
+@import url(footer.css);
 
 * {
 	margin: 0;
