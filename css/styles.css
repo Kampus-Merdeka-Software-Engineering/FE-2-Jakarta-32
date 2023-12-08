@@ -61,10 +61,18 @@ section#main .parent {
 }
 
 .card .txt {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 	position: absolute;
-	bottom: 10px;
-	left: 10px;
+	bottom: 20px;
+	left: 20px;
 	color: white;
+}
+
+.card .txt a {
+	text-decoration: none;
+	color: #40da6b;
 }
 
 .gradient-overlay {
@@ -87,9 +95,14 @@ section#main .parent {
 
 .boxCategory {
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: column;
 	gap: 20px;
 	width: 70%;
+}
+
+.categoryItem {
+	width: 100%;
 }
 
 .categoryItem h1,
@@ -101,6 +114,11 @@ section#main .parent {
 	margin-top: 14px;
 	display: flex;
 	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.categoryItem .box #cardItem .card {
+	width: 100%;
 }
 
 /* popular */
