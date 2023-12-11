@@ -1,7 +1,4 @@
-var apiUrl =
-	"https://newsapi.org/v2/everything?" +
-	"q=Health&" +
-	"apiKey=acd7350a113045e2a20eea6a85e1140c";
+var apiUrl = "https://65770653197926adf62d1857.mockapi.io/api/berita";
 
 const main = document.getElementById("main");
 
@@ -42,19 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
 	fetch(apiUrl)
 		.then((response) => response.json())
 		.then((data) => {
-			const details = data.articles;
+			// const details = data.articles;
+			console.log(data);
 
 			const card = document.createElement("div");
 			card.className = `boxHeadline`;
-			details.forEach((e) => {
-				if (e.url == itemId) {
-					console.log(e.title);
-					console.log(e.publishedAt);
+			data.forEach((e) => {
+				if (e.id == itemId) {
 					card.innerHTML = `
           <div class="boxTitle">
             <h1>${e.title}</h1>
             <div class="txt">
-              <p>${formatCreatedDate(e.publishedAt)}</p>
+              <p>${formatCreatedDate(e.createdAt)}</p>
               <p>${e.author}</p>
             </div>
           </div>

@@ -95,13 +95,8 @@ section#main .parent {
 
 .boxCategory {
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: column;
 	gap: 20px;
-	width: 70%;
-}
-
-.categoryItem {
 	width: 100%;
 }
 
@@ -111,14 +106,11 @@ section#main .parent {
 }
 
 .categoryItem .box {
+	width: 100%;
 	margin-top: 14px;
 	display: flex;
+	flex-direction: column;
 	gap: 20px;
-	flex-wrap: wrap;
-}
-
-.categoryItem .box #cardItem .card {
-	width: 100%;
 }
 
 /* popular */
@@ -147,6 +139,21 @@ section#main .parent {
 	width: 150px;
 	height: 150px;
 	border-radius: 8px;
+}
+
+.popular .box .cardItem .txt {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.popular .box .cardItem .txt h2 {
+	font-size: 20px;
+}
+
+.popular .box .cardItem .txt a {
+	text-decoration: none;
+	color: #40da6b;
 }
 
 /* Subscribe */
