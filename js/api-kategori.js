@@ -1,11 +1,7 @@
 const linkApi = "https://65770653197926adf62d1857.mockapi.io/api/berita";
 
 const cardParent1 = document.querySelector("main .container#Mentalhealth");
-const cardParent2 = document.querySelector("main .container#Lifestyle");
-const cardParent3 = document.querySelector("main .container#Foodhealth");
 console.log(cardParent1);
-console.log(cardParent2);
-console.log(cardParent3);
 
 function formatCreatedDate(createdDate) {
 	// Membuat objek Date dari string tanggal
@@ -58,34 +54,6 @@ function displayMentalHealth(data) {
 			</div>
       `;
 			cardParent1.appendChild(card);
-		}
-		if (item.topic == "Lifestyle") {
-			const card = document.createElement("div");
-			card.className = `boxCard`;
-			card.innerHTML = `
-			<img src="${item.urlToImage}" alt="" />
-			<div class="txtCard">
-				<h2>${item.title}</h2>
-				<p>${formatCreatedDate(item.createdAt)}</p>
-				<a target="_blank" href="detailNews.html?id=${item.id}" 
-				class="detail-link">Read More</a>
-			</div>
-			`;
-			cardParent2.appendChild(card);
-		}
-		if (item.topic == "Food Health") {
-			const card = document.createElement("div");
-			card.className = `boxCard`;
-			card.innerHTML = `
-			<img src="${item.urlToImage}" alt="" />
-			<div class="txtCard">
-				<h2>${item.title}</h2>
-				<p>${formatCreatedDate(item.createdAt)}</p>
-				<a target="_blank" href="detailNews.html?id=${item.id}" 
-				class="detail-link">Read More</a>
-			</div>
-			`;
-			cardParent3.appendChild(card);
 		}
 	});
 }

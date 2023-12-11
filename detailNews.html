@@ -26,7 +26,7 @@
 					<div class="BoxSearchAccount">
 						<button type="submit" class="account">
 							<i class="fa-regular fa-user"></i>
-							<span>Account</span>
+							<span id="usernameDisplay"></span>
 						</button>
 					</div>
 				</div>
@@ -54,5 +54,36 @@
 		</footer>
 		<script src="js/script.js"></script>
 		<script src="js/details.js"></script>
+
+		<script>
+			const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+			const name = localStorage.getItem("username");
+			const span = document.querySelector("#usernameDisplay");
+			const account = document.querySelector(".BoxSearchAccount .account");
+			console.log(isLoggedIn);
+			console.log(account);
+			if (isLoggedIn === "false" || isLoggedIn === null) {
+				span.appendChild(document.createTextNode("Account"));
+				account.setAttribute("href", "login.html");
+			}
+
+			span.addEventListener("click", () => {
+				if (isLoggedIn === "false" || isLoggedIn === null) {
+					//
+				} else {
+					const isLogout = confirm("Ingin Log Out?");
+					if (isLogout) {
+						localStorage.setItem("isLoggedIn", false);
+						location.reload(true);
+					}
+				}
+			});
+
+			if (isLoggedIn === "true") {
+				span.appendChild(document.createTextNode(name));
+				account.setAttribute("href", "#");
+			}
+		</script>
 	</body>
 </html>
