@@ -19,7 +19,7 @@ async function register() {
 		if (response.ok) {
 			registerResultElement.innerHTML =
 				"<p class='success-message'>Registration successful. Redirecting...</p>";
-			window.location.href = "/login.html";
+			window.location.href = "login.html";
 		} else {
 			const data = await response.json();
 

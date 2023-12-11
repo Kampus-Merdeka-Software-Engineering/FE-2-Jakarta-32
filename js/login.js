@@ -74,7 +74,7 @@ async function login() {
 		if (response.ok) {
 			loginResultElement.innerHTML =
 				"<p class='success-message'>Login successful. Redirecting...</p>";
-			window.location.href = "/index.html";
+			window.location.href = "index.html";
 			setLoginStatus(username);
 		} else {
 			const data = await response.json();
