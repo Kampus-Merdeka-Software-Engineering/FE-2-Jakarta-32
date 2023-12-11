@@ -1,6 +1,6 @@
 const linkApi = "https://65770653197926adf62d1857.mockapi.io/api/berita";
 
-const pathDetail = "../FE-2-Jakarta-32/";
+const pathDetail = "/FE-2-Jakarta-32/";
 
 const cardContainer = document.querySelector("#cardParent");
 const cardMentalHealth = document.querySelector(
@@ -61,9 +61,7 @@ function displayMain(data) {
           <div class="txt" >
             <p>${formatCreatedDate(item.createdAt)}</p>
             <h1>${truncateText(item.title, 40)}</h1>
-            <a target="_blank" href="${pathDetail}../detailNews.html?id=${
-				item.id
-			}" 
+            <a target="_blank" href="detailNews.html?id=${item.id}" 
               class="detail-link">Read More
             </a>
           </div>
@@ -93,9 +91,7 @@ function displayMentalHealth(data) {
         <p>${formatCreatedDate(item.createdAt)}</p>
         <h1>${truncateText(item.title, 100)}</h1>
 				<a target="_blank"
-				href="${pathDetail}../detailNews.html?id=${
-				item.id
-			}" class="detail-link">Read More</a>
+				href="detailNews.html?id=${item.id}" class="detail-link">Read More</a>
       </div>
     </div>
     `;
@@ -123,9 +119,7 @@ function displayLifestyle(data) {
         <p>${formatCreatedDate(item.createdAt)}</p>
         <h1>${truncateText(item.title, 100)}</h1>
 				<a target="_blank"
-				href="${pathDetail}../detailNews.html?id=${
-				item.id
-			}" class="detail-link">Read More</a>
+				href="detailNews.html?id=${item.id}" class="detail-link">Read More</a>
       </div>
     </div>
     `;
@@ -153,9 +147,7 @@ function displayFoodHealth(data) {
         <p>${formatCreatedDate(item.createdAt)}</p>
         <h1>${truncateText(item.title, 100)}</h1>
 				<a target="_blank"
-				href="${pathDetail}../detailNews.html?id=${
-				item.id
-			}" class="detail-link">Read More</a>
+				href="detailNews.html?id=${item.id}" class="detail-link">Read More</a>
       </div>
     </div>
     `;
@@ -172,9 +164,9 @@ function displayPopular(data) {
       <div class="txt">
       <h2>${truncateText(item.title, 10)}</h2>
       <p>${formatCreatedDate(item.createdAt)}</p>
-      <a target="_blank" href="${pathDetail}../detailNews.html?id=${
-			item.id
-		}" class="detail-link">Read More</a></div>
+      <a target="_blank" href="detailNews.html?id=${
+				item.id
+			}" class="detail-link">Read More</a></div>
     `;
 		cardPopular.appendChild(card);
 	});
