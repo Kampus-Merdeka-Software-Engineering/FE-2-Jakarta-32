@@ -1,7 +1,5 @@
 const linkApi = "https://65770653197926adf62d1857.mockapi.io/api/berita";
 
-const pathDetail = "/FE-2-Jakarta-32/";
-
 const cardContainer = document.querySelector("#cardParent");
 const cardMentalHealth = document.querySelector(
 	".boxCategory #MentalHealth .box"

@@ -41,6 +41,11 @@ main .container {
 .container .boxCard .txtCard p {
 	font-size: 14px;
 	margin-top: 10px;
+	/* color: #40da6b; */
+}
+
+.container .boxCard .txtCard a {
+	text-decoration: none;
 	color: #40da6b;
 }
 

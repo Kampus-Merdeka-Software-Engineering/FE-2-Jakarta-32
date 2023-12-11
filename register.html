@@ -12,13 +12,13 @@
 				<h1>HEALTHY <span class="text">NEWS.</span></h1>
 			</div>
 			<div class="right">
-				<form id="loginForm" action="login.php" method="post">
+				<form id="registerForm" action="javascript:void(0);">
 					<h2>Register</h2>
-					<label for="Email">Email:</label>
+					<label for="email">Email:</label>
 					<input
 						type="text"
-						id="username"
-						name="username"
+						id="email"
+						name="email"
 						placeholder="Type your Email"
 						required />
 
@@ -43,12 +43,14 @@
 							onclick="togglePasswordVisibility()"></span>
 					</div>
 
+					<div id="registerResult" class="register-result"></div>
 					<div class="button-register">
-						<button type="button" onclick="validateForm()">Register</button>
+						<button type="button" onclick="register()">Register</button>
 					</div>
 				</form>
 			</div>
 		</div>
-		<script src="js/login.js"></script>
+
+		<script src="js/register.js"></script>
 	</body>
 </html>
