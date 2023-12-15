@@ -190,3 +190,58 @@ fetch(linkApi)
 	.catch((error) => {
 		console.error("There was a problem with the fetch operation:", error);
 	});
+
+// subscribe
+
+// Fungsi untuk berlangganan
+function subscribe() {
+	if (isLoggedIn === "true") {
+		alert("Berlangganan berhasil!");
+		updateData(newData);
+		// Tambahkan logika untuk menambahkan pengguna ke daftar langganan di database
+	} else {
+		// Jika pengguna belum login, tampilkan pesan
+		const dahLogin = confirm("Anda harus login terlebih dahulu!");
+		if (dahLogin) {
+			window.location.href = "login.html";
+		}
+	}
+}
+
+// update
+
+const apiEndpoint =
+	"https://wicked-erin-bandicoot.cyclic.app/api/user/subscribe";
+const newData = {
+	// Data yang ingin diperbarui
+	subscribe: "TRUE",
+};
+
+function updateData(newData) {
+	// Pastikan Anda memiliki akses token atau kredensial yang diperlukan untuk autentikasi
+	const headers = {
+		"Content-Type": "application/json",
+		// 'Authorization': 'Bearer YOUR_ACCESS_TOKEN' // Tambahkan header Authorization jika diperlukan
+	};
+
+	// Menggunakan metode fetch untuk melakukan pembaruan (update)
+	fetch(apiEndpoint, {
+		method: "POST", // Gantilah dengan 'PATCH' jika API mendukung pembaruan sebagian (partial update)
+		headers: headers,
+		body: JSON.stringify(newData),
+	})
+		.then((response) => {
+			if (!response.ok) {
+				throw new Error("Gagal melakukan update data");
+			}
+			return response.json();
+		})
+		.then((updatedData) => {
+			console.log("Data berhasil diupdate:", updatedData);
+			// Tambahkan logika atau pembaruan UI jika diperlukan
+		})
+		.catch((error) => {
+			console.error("Error:", error);
+			// Tambahkan logika penanganan error jika diperlukan
+		});
+}
